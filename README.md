@@ -1,2 +1,4 @@
 # Spoken-Language-Identification
-Bachelor Thesis Project
+## Bachelor Thesis Project
+
+Feature Extraction: Mel spectrogram
