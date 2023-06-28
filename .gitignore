@@ -1,2 +1,3 @@
 dataset/
 kaggle.json
+*.h5
