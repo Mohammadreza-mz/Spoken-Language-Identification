@@ -1,3 +1,4 @@
 dataset/
 kaggle.json
 *.h5
+*.hdf5
