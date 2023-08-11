@@ -8,3 +8,5 @@ Kaggle's spoken language identification with 73080 samples from English, Spanish
 
 ## Feature Extraction
 Mel Spectrogram is used for feature extraction and Mel Spectrograms are saved into `.npy` files. The model reads them using a custom data generator.
+
+![mel-spectrogram](./images/mel-spectrogram.png "mel-spectrogram")
