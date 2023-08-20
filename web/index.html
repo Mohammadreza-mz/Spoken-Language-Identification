@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Audio Processing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Spoken Language Identification</title>
 </head>
 <body>
-    <h1>Upload Audio for Processing</h1>
-    <form id="upload-form" enctype="multipart/form-data">
-        <input type="file" name="audio" accept="audio/*">
-        <button type="submit">Process</button>
-    </form>
-    <p id="result"></p>
-    <script>
-        document.getElementById("upload-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-
-            fetch("/process", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.text())
-            .then(result => {
-                document.getElementById("result").textContent = result;
-            });
-        });
-    </script>
+    <div class="container">
+        <header>
+            <h1>Spoken Language Identification</h1>
+            <p>Upload an audio file to identify the spoken language.</p>
+        </header>
+        <main>
+            <div class="upload-section">
+                <label for="audio-upload" class="upload-label">
+                    <span>Drag and drop or click to upload</span>
+                </label>
+                <input type="file" id="audio-upload" accept="audio/*">
+            </div>
+            <div class="result-section">
+                <h2>Identification Result</h2>
+                <p class="result-text">Language: <span id="language-result">None</span></p>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
