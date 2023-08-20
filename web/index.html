@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Processing</title>
+</head>
+<body>
+    <h1>Upload Audio for Processing</h1>
+    <form id="upload-form" enctype="multipart/form-data">
+        <input type="file" name="audio" accept="audio/*">
+        <button type="submit">Process</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        document.getElementById("upload-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+
+            fetch("/process", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(result => {
+                document.getElementById("result").textContent = result;
+            });
+        });
+    </script>
+</body>
+</html>
