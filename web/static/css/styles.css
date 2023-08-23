@@ -21,6 +21,10 @@ header {
     margin-bottom: 30px;
 }
 
+.header-text {
+    color: white;
+}
+
 h1 {
     font-size: 36px;
     margin-bottom: 10px;
@@ -53,7 +57,7 @@ p {
     background: #555;
 }
 
-#audio-upload {
+#fileInput {
     display: none;
 }
 
@@ -64,7 +68,7 @@ p {
     border-radius: 5px;
 }
 
-.result-text {
+#result {
     font-size: 20px;
     margin-top: 10px;
 }
@@ -72,4 +76,25 @@ p {
 #language-result {
     font-weight: bold;
     color: #008CBA;
+}
+
+.upload-section {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+#predictButton {
+    display: block;
+    margin: 10px auto;
+    background-color: #50C878;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#predictButton:hover {
+    background-color: #AFE1AF;
 }

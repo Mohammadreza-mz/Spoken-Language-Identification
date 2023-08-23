@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>Spoken Language Identification</title>
 </head>
 <body>
+
+
     <div class="container">
         <header>
-            <h1>Spoken Language Identification</h1>
-            <p>Upload an audio file to identify the spoken language.</p>
+            <h1 class="header-text">Spoken Language Identification</h1>
+            <p class="header-text">Upload an audio file to identify the spoken language.</p>
         </header>
         <main>
             <div class="upload-section">
-                <label for="audio-upload" class="upload-label">
-                    <span>Drag and drop or click to upload</span>
+                <label for="fileInput" id="fileLabel" class="upload-label">
+                    <span id="uploadText">Drag and drop or click to upload</span>
                 </label>
-                <input type="file" id="audio-upload" accept="audio/*">
+                <input type="file" id="fileInput" accept="audio/*">
+                <button id="predictButton">Submit</button>
             </div>
             <div class="result-section">
                 <h2>Identification Result</h2>
-                <p class="result-text">Language: <span id="language-result">None</span></p>
+                <p id="result">Language: <span id="language-result">None</span></p>
             </div>
         </main>
     </div>
-    <script src="script.js"></script>
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
