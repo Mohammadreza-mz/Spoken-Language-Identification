@@ -21,7 +21,7 @@ This project implemented two different architectures CNN and CRNN.
 ![Models Architecture](./images/Models-Architecture.png "Models Architecture")
 
 ## Website
-There is also a website! 
+There is also a [website](http://www.mohammadzadehasl.com/bachelor-project)! 
 
 ![web-image](./images/web-image.png "web-image")
 
